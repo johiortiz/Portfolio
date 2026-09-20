@@ -34,3 +34,52 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+@keyframes smoke-float-primary {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    opacity: 0.62;
+    transform: translate3d(5%, -4%, 0) scale(1.08);
+  }
+}
+
+@keyframes smoke-float-secondary {
+  0%,
+  100% {
+    opacity: 0.13;
+    transform: translate3d(0, 0, 0) rotate(6deg) scale(1.04);
+  }
+
+  50% {
+    opacity: 0.28;
+    transform: translate3d(-7%, 5%, 0) rotate(2deg) scale(1.14);
+  }
+}
+
+.smoke-layer {
+  will-change: transform, opacity;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.smoke-layer--primary {
+  animation-name: smoke-float-primary;
+  animation-duration: 18s;
+}
+
+.smoke-layer--secondary {
+  animation-name: smoke-float-secondary;
+  animation-duration: 24s;
+  animation-delay: -9s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smoke-layer {
+    animation: none;
+  }
+}
