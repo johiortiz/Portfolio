@@ -6,6 +6,7 @@ import johiLogo from "@/assets/images/johi.svg";
 import ortizLogo from "@/assets/images/Ortiz.svg";
 import smoke from "@/assets/images/smoke.svg";
 import { johiFragments, ortizFragments } from "@/data/nameFragments";
+import { Projects } from "@/components/sections/Projects";
 
 function App() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -122,14 +123,7 @@ function App() {
         />
       </section>
 
-      <section
-        id="projects"
-        className="flex min-h-screen items-center justify-center bg-zinc-950 px-6 text-center"
-      >
-        <p className="font-mono text-sm tracking-[0.2em] text-zinc-500 uppercase">
-          Próximamente: proyectos
-        </p>
-      </section>
+      <Projects />
 
       <section id="about" className="min-h-screen bg-black" />
 
