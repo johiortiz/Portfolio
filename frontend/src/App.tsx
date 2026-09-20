@@ -1,7 +1,11 @@
 import { useRef } from "react";
 
-import { BrokenPortrait } from "./components/sections/BrokenPortrait";
-import smoke from "./assets/images/smoke.png";
+import { BrokenPortrait } from "@/components/sections/BrokenPortrait";
+import { BrokenWord } from "@/components/sections/BrokenWord";
+import johiLogo from "@/assets/images/johi.svg";
+import ortizLogo from "@/assets/images/Ortiz.svg";
+import smoke from "@/assets/images/smoke.svg";
+import { johiFragments, ortizFragments } from "@/data/nameFragments";
 
 function App() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -73,19 +77,25 @@ function App() {
                 Full-stack developer · Madrid
               </p>
 
-              <h1
-                id="hero-title"
-                className="font-mono text-[clamp(4.8rem,11vw,10rem)] font-bold leading-[0.78] tracking-[-0.1em] text-zinc-50"
-              >
-                Johi
-              <div
-                aria-hidden="true"
-                className="mt-8 h-[3px] w-48 -rotate-1 bg-sky-100 shadow-[0_0_16px_rgba(186,230,253,0.35)] sm:w-64"
-              />
-                <br />
-                Ortiz
-              </h1>
+              <h1 id="hero-title" className="flex w-fit flex-col items-start">
+                <span className="sr-only">Johi Ortiz</span>
 
+                <BrokenWord
+                  src={johiLogo}
+                  alt="Johi"
+                  heroRef={heroRef}
+                  pieces={johiFragments}
+                  className="w-[clamp(11rem,24vw,24rem)] aspect-[3.3/1]"
+                />
+
+                <BrokenWord
+                  src={ortizLogo}
+                  alt="Ortiz"
+                  heroRef={heroRef}
+                  pieces={ortizFragments}
+                  className="-mt-3 w-[clamp(16rem,32vw,32rem)] aspect-[3.8/1] sm:-mt-5"
+                />
+              </h1>
 
             </div>
           </div>

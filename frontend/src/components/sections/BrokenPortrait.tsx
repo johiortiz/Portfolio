@@ -7,7 +7,7 @@ import {
   useTransform,
 } from "motion/react";
 
-import portrait from "@/assets/images/portrait.png";
+import portrait from "@/assets/images/portrait.svg";
 
 type FragmentProps = {
   heroRef: RefObject<HTMLElement | null>;
