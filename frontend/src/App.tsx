@@ -7,6 +7,7 @@ import ortizLogo from "@/assets/images/Ortiz.svg";
 import smoke from "@/assets/images/smoke.svg";
 import { johiFragments, ortizFragments } from "@/data/nameFragments";
 import { Projects } from "@/components/sections/Projects";
+import { About } from "@/components/sections/About";
 
 function App() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -39,39 +40,6 @@ function App() {
         </div>
 
         <div className="relative z-20 flex min-h-[100svh] w-full flex-col px-6 pt-8 pb-10 sm:px-10 lg:px-16 xl:px-24">
-          <nav
-            aria-label="Navegación principal"
-            className="ml-auto flex items-center gap-6 text-sm text-zinc-300 sm:gap-8"
-          >
-            <a
-              href="#home"
-              className="transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
-            >
-              Home
-            </a>
-
-            <a
-              href="#projects"
-              className="transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
-            >
-              Proyectos
-            </a>
-
-            <a
-              href="#about"
-              className="transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
-            >
-              About
-            </a>
-
-            <a
-              href="#contact"
-              className="transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
-            >
-              Contacto
-            </a>
-          </nav>
-
           <div className="relative flex flex-1 items-center">
             <div className="relative z-20 max-w-xl pt-12 lg:-translate-y-6">
               <p className="mb-5 font-mono text-xs tracking-[0.24em] text-zinc-400 uppercase">
@@ -125,7 +93,7 @@ function App() {
 
       <Projects />
 
-      <section id="about" className="min-h-screen bg-black" />
+      <About />
 
       <section id="contact" className="min-h-screen bg-zinc-950" />
     </main>
